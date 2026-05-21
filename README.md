@@ -1,5 +1,5 @@
 # Cyber Training
-# Bandit Level 1 
+# Bandit Level 0 
 ## Obiettivo
 aprire un file nella home
 ## Coamndi usati
