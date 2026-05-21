@@ -12,6 +12,7 @@ per trovare la password bastava aprire il file
 Cosa ho imparato
 .come si vede l'elenco dei file i una dyrectori
 .come si apre un file
+
 #Bandit level 1
 ## Obiettivo
 leggere il contenuto di un file nella home
