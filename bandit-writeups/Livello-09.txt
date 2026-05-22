@@ -1,0 +1,22 @@
+# Bandit Level 9
+
+## Obiettivo
+Trovare la password nel file `data.txt`, sapendo che è l'unica riga di testo unica che non si ripete mai all'interno del documento.
+
+## Comandi usati
+```bash
+sort data.txt | uniq -u
+
+
+Procedimento
+Il file presentava migliaia di righe duplicate. Ho combinato due comandi tramite il simbolo della pipe (|): prima ho ordinato alfabeticamente il file con sort (operazione obbligatoria per far funzionare il controllo dei duplicati) e poi ho passato il risultato a uniq con l'opzione -u.
+
+Soluzione
+Il comando combinato ha rimosso tutte le righe ripetute, lasciando visibile a schermo solo ed esclusivamente l'unica riga di testo che compariva una sola volta: la password per il livello 9.
+
+Cosa ho imparato
+La pipe (|) serve a collegare più comandi, prendendo l'output del primo e passandolo direttamente come input al secondo.
+
+Il comando sort ordina le righe di un file di testo in ordine alfabetico o numerico.
+
+Il comando uniq -u analizza righe adiacenti e stampa a schermo solo le righe che sono uniche al 100%, scartando quelle che hanno dei duplicati.

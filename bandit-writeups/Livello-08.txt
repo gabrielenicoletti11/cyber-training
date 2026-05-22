@@ -1,0 +1,17 @@
+# Bandit Level 8
+
+## Obiettivo
+Trovare la password all'interno di un file molto grande chiamato `data.txt`, sapendo che si trova nella riga accanto alla parola "millionth".
+
+## Comandi usati
+```bash
+grep "millionth" data.txt
+
+Procedimento
+Dato che il file data.txt conteneva migliaia di righe di testo, leggerlo tutto a mano sarebbe stato impossibile. Ho utilizzato il comando grep passando como argomento la parola chiave fornita dall'esercizio, in modo da isolare solo il testo d'interesse.
+
+Soluzione
+Il comando grep ha scansionato il file e ha estratto l'unica riga contenente la parola "millionth", mostrando subito di fianco la password cercata.
+
+Cosa ho imparato
+Il comando grep serve a cercare stringhe di testo specifiche o pattern all'interno dei file, funzionando come un filtro avanzato.

@@ -1,0 +1,20 @@
+# Bandit Level 3
+
+## Obiettivo
+Trovare la password memorizzata in un file il cui nome contiene degli spazi: `spaces in this filename`.
+
+## Comandi usati
+```bash
+ls
+cat "spaces in this filename"
+
+Procedimento
+Il file presente nella home directory contiene degli spazi nel nome. Se avessi digitato cat spaces in this filename, la shell avrebbe cercato quattro file separati. Per indicare che si trattava di un unico file, ho racchiuso l'intero nome tra virgolette doppie (in alternativa, avrei potuto usare le barre rovesciate \ prima di ogni spazio o il tasto TAB).
+
+Soluzione
+Eseguendo il comando cat "spaces in this filename", il terminale ha letto correttamente l'intero blocco di testo come un unico file, mostrando a schermo la password per accedere all'utente bandit3.
+
+Cosa ho imparato
+Gli spazi nel terminale Linux vengono usati per separare i comandi e gli argomenti.
+
+Per gestire file con spazi nel nome è obbligatorio "proteggerli" racchiudendo il nome tra virgolette o inserendo i caratteri di escape \

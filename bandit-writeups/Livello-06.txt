@@ -1,0 +1,22 @@
+# Bandit Level 6
+
+## Obiettivo
+Trovare un file nascosto in qualche directory sotto la cartella `inhere` che sia leggibile dall'uomo, grande esattamente 1033 byte e non eseguibile.
+
+## Comandi usati
+```bash
+find inhere/ -type f -size 1033c
+cat [percorso_del_file_trovato]
+
+Procedimento
+La directory conteneva decine di sotto-cartelle e centinaia di file, rendendo impossibile una ricerca manuale. Ho sfruttato il comando find impostando i filtri richiesti dall'esercizio: tipo file (-type f) e dimensione esatta di 1033 byte (-size 1033c).
+
+Soluzione
+Il comando find ha setacciato l'albero delle cartelle e ha sputato fuori un unico percorso corrispondente ai filtri. Aprendo quel file con cat, ho letto la password per il livello 6.
+
+Cosa ho imparato
+Il comando find è uno strumento potentissimo per cercare elementi nel filesystem in base a criteri specifici.
+
+L'opzione -type f limita la ricerca ai soli file normali (escluding le cartelle).
+
+L'opzione -size seguita da un numero e dalla lettera c indica la dimensione esatta espressa in singoli byte (characters).

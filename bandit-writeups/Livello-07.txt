@@ -1,0 +1,22 @@
+# Bandit Level 7
+
+## Obiettivo
+Trovare un file sperduto da qualche parte sull'intero server che appartenga all'utente `bandit7`, al gruppo `bandit6` e che pesi esattamente 33 byte.
+
+## Comandi usati
+```bash
+find / -user bandit7 -group bandit6 -size 33c 2>/dev/null
+cat [percorso_del_file_trovato]
+
+Procedimento
+Ho dovuto cercare nell'intero filesystem partendo dalla radice (/). Poiché il comando find avrebbe provato ad accedere a cartelle di sistema protette generando tantissimi errori sullo schermo, ho aggiunto alla fine del comando la stringa 2>/dev/null per fare pulizia e nascondere i messaggi di errore.
+
+Soluzione
+Il comando ha ignorato le cartelle a cui non avevo accesso e ha stampato l'unico percorso valido. Leggendo il file trovato, ho recuperato la password per il livello 7.
+
+Cosa ho imparato
+Il comando find / avvia una ricerca globale a partire dalla radice di tutto il sistema Linux.
+
+I filtri -user e -group permettono di cercare file associati a specifici proprietari o gruppi di sicurezza.
+
+2>/dev/null è una tecnica di reindirizzamento in Linux che sposta i messaggi di errore (canale 2) in un buco nero virtuale (/dev/null), lasciando pulito l'output sul terminale.

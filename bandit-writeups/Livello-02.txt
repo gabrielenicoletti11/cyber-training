@@ -1,0 +1,20 @@
+# Bandit Level 2
+
+## Obiettivo
+L'obiettivo di questo livello è riuscire a visualizzare il contenuto di un file memorizzato all'interno della directory corrente il cui nome corrisponde a un singolo carattere speciale, nello specifico un trattino `-`. La difficoltà sta nel superare il blocco della shell di Linux, che tende a interpretare questo carattere come un comando speciale anziché come il nome di un file fisico.
+
+## Comandi usati
+```bash
+ls
+cat ./-
+
+Procedimento
+Ho usato ls per controllare il contenuto della cartella e ho notato il file -. Poiché in Linux il carattere trattino viene normalmente interpretato dai comandi come l'inizio di un'opzione o come input standard (facendo bloccare cat), ho dovuto aggirare il problema specificando la posizione esatta del file usando il percorso relativo ./.
+
+Soluzione
+Eseguendo cat ./-, il comando ha capito che si trattava di un nome di file reale all'interno della cartella corrente e ha stampato a schermo la password per il livello successivo.
+
+Cosa ho imparato
+In Linux, alcuni caratteri speciali come il trattino - hanno significati particolari per la shell.
+
+Usare ./ davanti al nome di un file specifica un percorso relativo, forzando il terminale a trattare l'argomento come un file fisico e non come un comando o un'opzione.

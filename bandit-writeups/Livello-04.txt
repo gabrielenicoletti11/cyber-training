@@ -1,0 +1,23 @@
+# Bandit Level 4
+
+## Obiettivo
+Trovare la password memorizzata in un file nascosto situato all'interno della directory `inhere`.
+
+## Comandi usati
+```bash
+cd inhere
+ls -la
+cat .hidden
+
+Procedimento
+Per prima cosa mi sono spostato all'interno della cartella indicata usando il comando cd inhere. Lanciando un normale ls, la cartella sembrava vuota. Ho quindi utilizzato il comando ls -la per mostrare tutti i file, inclusi quelli nascosti, individuando il file chiamato .hidden.
+
+Soluzione
+Ho letto il file nascosto individuato digitando cat .hidden, ottenendo così la password per il livello successivo.
+
+Cosa ho imparato
+Il comando cd (change directory) permette di spostarsi da una cartella all'altra nel filesystem.
+
+In Linux, tutti i file che iniziano con un punto . sono considerati file nascosti.
+
+L'opzione -la unita al comando ls permette di vedere tutti i file nascosti e i loro dettagli (permessi, proprietario, ecc.).

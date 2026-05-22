@@ -1,0 +1,21 @@
+# Bandit Level 5
+
+## Obiettivo
+Trovare la password nascosta nell'unico file leggibile dall'uomo (human-readable) presente dentro la directory `inhere`.
+
+## Comandi usati
+```bash
+cd inhere
+file ./*
+cat ./-file07
+
+Procedimento
+Sono entrato nella cartella inhere, che conteneva molti file dai nomi ingannevoli che iniziavano con un trattino. Ho utilizzato il comando file ./* (usando l'asterisco come carattere jolly per controllarli tutti insieme) per analizzare la natura e il formato di ciascun file.
+
+Soluzione
+L'output del comando file ha mostrato che quasi tutti i file contenevano dati binari o codificati, tranne uno (ad esempio ./-file07) contrassegnato chiaramente come "ASCII text". Leggendo quel file specifico, ho ottenuto la password corretta.
+
+Cosa ho imparato
+Il comando file analizza la struttura di un file e dice esattamente di che tipo di file si tratta (es. testo, binario, immagine, archivio).
+
+Il testo "ASCII text" indica che il file contiene caratteri leggibili dall'uomo senza caratteri binari corrotti.

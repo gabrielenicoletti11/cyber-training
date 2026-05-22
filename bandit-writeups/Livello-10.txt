@@ -1,0 +1,19 @@
+# Bandit Level 10
+
+## Obiettivo
+Trovare la password nascosta nel file `data.txt`, sapendo che il file è in formato binario e che la password è preceduta da diversi caratteri `=`.
+
+## Comandi usati
+```bash
+strings data.txt | grep "=="
+
+Procedimento
+Trattandosi di un file binario/eseguibile, l'uso di cat avrebbe riempito lo schermo di caratteri strani e illeggibili. Ho usato il comando strings per estrarre dal file solo i pezzi composti da testo normale e leggibile dall'uomo, filtrando poi il risultato con grep per cercare i doppi uguali ==.
+
+Soluzione
+L'output combinato ha ripulito il codice binario e ha mostrato la riga contenente i caratteri ==== seguita dalla password in chiaro per accedere al livello 10.
+
+Cosa ho imparato
+Il comando strings analizza i file binari o corrotti ed estrae esclusivamente le sequenze di caratteri stampabili e leggibili dall'uomo.
+
+È uno strumento fondamentale in cybersecurity per fare analisi preliminari su file eseguibili o sconosciuti.

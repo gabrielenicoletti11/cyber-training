@@ -1,0 +1,20 @@
+# Bandit Level 1
+
+## Obiettivo
+L'obiettivo di questo esercizio è esplorare la directory principale (home directory) dell'utente appena loggato per individuare un file di testo specifico denominato `readme`. Una volta trovato il file, lo scopo è quello di leggerne il contenuto direttamente dal terminale per recuperare la stringa alfanumerica segreta, che fungerà da chiave di accesso per il livello successivo.
+
+## Comandi usati
+```bash
+ls
+cat readme
+
+Procedimento
+Una volta entrato nel server come bandit0, ho usato il comando ls per elencare i file visibili nella mia posizione corrente. Ho trovato un file di testo chiamato readme. Successivamente ho usato il comando cat seguito dal nome del file per stamparne il contenuto a schermo.
+
+Soluzione
+Leggendo il file readme con il comando cat, sul terminale è apparsa la stringa segreta che rappresenta la password per accedere all'utente successivo (bandit1).
+
+Cosa ho imparato
+Il comando ls serve a visualizzare la lista dei file e delle cartelle presenti nella directory corrente.
+
+Il comando cat legge il contenuto di uno o più file e lo mostra direttamente sul terminale.

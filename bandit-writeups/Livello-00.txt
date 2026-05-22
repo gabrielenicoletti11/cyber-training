@@ -1,0 +1,19 @@
+# Bandit Level 0
+
+## Obiettivo
+L'obiettivo principale di questo livello iniziale consiste nello stabilire una connessione remota sicura verso l'infrastruttura di gioco messa a disposizione da OverTheWire. Per fare questo, è necessario configurare correttamente il client SSH del proprio sistema operativo locale in modo da indirizzare la comunicazione verso il server corretto, utilizzando le credenziali base fornite per l'account d'ingresso.
+
+## Comandi usati
+```bash
+ssh bandit0@bandit.labs.overthewire.org -p 2220
+
+Procedimento
+Ho aperto il mio terminale Ubuntu e ho inserito il comando SSH fornito per connettermi al server remoto di OverTheWire, specificando l'utente bandit0 e la porta personalizzata 2220. Alla richiesta del sistema ho digitato la password iniziale.
+
+Soluzione
+Inserendo la password iniziale bandit0, il server ha accettato la connessione e mi ha mostrato la schermata di benvenuto del gioco.
+
+Cosa ho imparato
+SSH serve per connettersi e lavorare in modo sicuro su un computer o server remoto.
+
+Il parametro -p permette di specificare una porta di comunicazione diversa da quella standard.
